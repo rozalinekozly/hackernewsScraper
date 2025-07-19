@@ -10,15 +10,16 @@ module.exports = async (req, res) => {
 
     const results = [];
 
-    $(".athing").each((_, element) => {
-      const title = $(element).find(".titleline > a").text();
-      const url = $(element).find(".titleline > a").attr("href");
+    $(".athing").each((_, el) => {
+      const title = $(el).find(".titleline > a").text();
+      const url = $(el).find(".titleline > a").attr("href");
       results.push({ title, url });
     });
 
-    res.setHeader("Access-Control-Allow-Origin", "*"); // Allow fetch from frontend
+    res.setHeader("Access-Control-Allow-Origin", "*");
     res.status(200).json(results);
   } catch (err) {
-    res.status(500).json({ error: "Failed to scrape" });
+    console.error("Scraping error:", err);
+    res.status(500).json({ error: "Scraping failed" });
   }
 };

@@ -1,25 +1,8 @@
 {
-  "name": "hackernewsscraper",
+  "name": "hackernews-scraper",
   "version": "1.0.0",
-  "description": "",
-  "main": "app.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/rozalinekozly/hackernewsScraper.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
-  "bugs": {
-    "url": "https://github.com/rozalinekozly/hackernewsScraper/issues"
-  },
-  "homepage": "https://github.com/rozalinekozly/hackernewsScraper#readme",
   "dependencies": {
-    "cheerio": "^1.1.0",
-    "node-fetch": "^3.3.2"
+    "cheerio": "^1.0.0-rc.12",
+    "node-fetch": "^2.6.7"
   }
 }
